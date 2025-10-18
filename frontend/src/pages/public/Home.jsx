@@ -40,12 +40,12 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans overflow-hidden">
+    <div className="min-h-screen overflow-hidden font-sans bg-gray-50">
       <Navbar />
 
       {/* Hero Section */}
       <section
-        className="relative min-h-screen flex items-center justify-center text-center"
+        className="relative flex items-center justify-center min-h-screen text-center"
         style={{
           backgroundImage: `url(${quranbg})`,
           backgroundSize: "cover",
@@ -57,29 +57,27 @@ export default function Home() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="relative z-10 px-6 md:px-20 max-w-3xl"
+          className="relative z-10 max-w-3xl px-6 md:px-20"
         >
-          <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6 drop-shadow-xl">
+          <h1 className="mb-6 text-5xl font-extrabold leading-tight text-white md:text-7xl drop-shadow-xl">
             Revise Qur’an <span className="text-yellow-400">Together</span>
           </h1>
-          <p className="text-lg md:text-2xl text-gray-200 mb-10 leading-relaxed">
+          <p className="mb-10 text-lg leading-relaxed text-gray-200 md:text-2xl">
             Join a community of students, teachers, and huffāẓ to rehearse,
             strengthen, and perfect your memorization with purpose.
           </p>
 
-          <div className="flex flex-col md:flex-row gap-5 justify-center">
+          <div className="flex flex-col justify-center gap-5 md:flex-row">
             <Button
               size="lg"
-              className="bg-yellow-400 text-green-900 font-semibold px-8 py-6 text-lg rounded-full 
-              hover:bg-yellow-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-yellow-200/40 transition-all duration-300"
+              className="px-8 py-6 text-lg font-semibold text-green-900 transition-all duration-300 bg-yellow-400 rounded-full hover:bg-yellow-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-yellow-200/40"
             >
               Register Now
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-yellow-400 text-yellow-300 hover:bg-yellow-300 hover:text-green-900 
-              font-semibold px-8 py-6 text-lg rounded-full transition-all duration-300"
+              className="px-8 py-6 text-lg font-semibold text-yellow-300 transition-all duration-300 border-2 border-yellow-400 rounded-full hover:bg-yellow-300 hover:text-green-900"
             >
               Learn More
             </Button>
@@ -88,14 +86,14 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 bg-gradient-to-b from-green-50 via-white to-green-100 relative overflow-hidden">
+      <section className="relative py-24 overflow-hidden bg-gradient-to-b from-green-50 via-white to-green-100">
         <div className="absolute inset-0 bg-gradient-to-b from-yellow-50 via-white to-green-50 opacity-40"></div>
-        <div className="max-w-7xl mx-auto text-center relative z-10 px-6">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-16">
+        <div className="relative z-10 px-6 mx-auto text-center max-w-7xl">
+          <h2 className="mb-16 text-4xl font-bold text-gray-900 md:text-5xl">
             Why Choose <span className="text-green-700">Murājaʿah?</span>
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -104,7 +102,7 @@ export default function Home() {
                   rotate: index % 2 === 0 ? 1.5 : -1.5,
                 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                className="cursor-pointer transform transition-all duration-300"
+                className="transition-all duration-300 transform cursor-pointer"
               >
                 <FeatureCard
                   title={feature.title}
@@ -118,17 +116,16 @@ export default function Home() {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-gradient-to-b from-green-700 to-green-800 py-20 text-center text-white relative overflow-hidden">
+      <section className="relative py-20 overflow-hidden text-center text-white bg-gradient-to-b from-green-700 to-green-800">
         <div className="absolute inset-0 bg-gradient-to-r from-green-800 to-green-700 opacity-90"></div>
         <div className="relative z-10">
-          <h2 className="text-3xl md:text-5xl font-bold mb-8">
+          <h2 className="mb-8 text-3xl font-bold md:text-5xl">
             Ready to Strengthen Your Qur’an Connection?
             
           </h2>
           <Button
             size="lg"
-            className="bg-yellow-400 text-green-900 font-semibold px-8 py-6 text-lg rounded-full 
-            hover:bg-yellow-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-yellow-200/40 transition-all duration-300"
+            className="px-8 py-6 text-lg font-semibold text-green-900 transition-all duration-300 bg-yellow-400 rounded-full hover:bg-yellow-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-yellow-200/40"
           >
             Join Now
           </Button>
