@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 const AnimatedSection = ({ children, className = "" }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-
+  
   return (
     <div
       ref={ref}
